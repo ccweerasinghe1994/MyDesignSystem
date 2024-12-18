@@ -21,15 +21,24 @@ importers:
       '@eslint/js':
         specifier: ^9.15.0
         version: 9.17.0
+      '@storybook/addon-a11y':
+        specifier: ^8.4.7
+        version: 8.4.7(storybook@8.4.7)
       '@storybook/addon-essentials':
         specifier: 8.4.7
         version: 8.4.7(@types/react@18.3.17)(storybook@8.4.7)
       '@storybook/addon-interactions':
         specifier: 8.4.7
         version: 8.4.7(storybook@8.4.7)
+      '@storybook/addon-links':
+        specifier: ^8.4.7
+        version: 8.4.7(react@18.3.1)(storybook@8.4.7)
       '@storybook/addon-onboarding':
         specifier: 8.4.7
         version: 8.4.7(react@18.3.1)(storybook@8.4.7)
+      '@storybook/addon-themes':
+        specifier: ^8.4.7
+        version: 8.4.7(storybook@8.4.7)
       '@storybook/blocks':
         specifier: 8.4.7
         version: 8.4.7(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.4.7)
@@ -524,6 +533,11 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@storybook/addon-a11y@8.4.7':
+    resolution: {integrity: sha512-GpUvXp6n25U1ZSv+hmDC+05BEqxWdlWjQTb/GaboRXZQeMBlze6zckpVb66spjmmtQAIISo0eZxX1+mGcVR7lA==}
+    peerDependencies:
+      storybook: ^8.4.7
+
   '@storybook/addon-actions@8.4.7':
     resolution: {integrity: sha512-mjtD5JxcPuW74T6h7nqMxWTvDneFtokg88p6kQ5OnC1M259iAXb//yiSZgu/quunMHPCXSiqn4FNOSgASTSbsA==}
     peerDependencies:
@@ -559,6 +573,15 @@ packages:
     peerDependencies:
       storybook: ^8.4.7
 
+  '@storybook/addon-links@8.4.7':
+    resolution: {integrity: sha512-L/1h4dMeMKF+MM0DanN24v5p3faNYbbtOApMgg7SlcBT/tgo3+cAjkgmNpYA8XtKnDezm+T2mTDhB8mmIRZpIQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.4.7
+    peerDependenciesMeta:
+      react:
+        optional: true
+
   '@storybook/addon-measure@8.4.7':
     resolution: {integrity: sha512-QfvqYWDSI5F68mKvafEmZic3SMiK7zZM8VA0kTXx55hF/+vx61Mm0HccApUT96xCXIgmwQwDvn9gS4TkX81Dmw==}
     peerDependencies:
@@ -571,6 +594,11 @@ packages:
 
   '@storybook/addon-outline@8.4.7':
     resolution: {integrity: sha512-6LYRqUZxSodmAIl8icr585Oi8pmzbZ90aloZJIpve+dBAzo7ydYrSQxxoQEVltXbKf3VeVcrs64ouAYqjisMYA==}
+    peerDependencies:
+      storybook: ^8.4.7
+
+  '@storybook/addon-themes@8.4.7':
+    resolution: {integrity: sha512-MZa3eWTz0b3BQvF71WqLqvEYzDtbMhQx1IIluWBMMGzJ4sWBzLX85LoNMUlHsNd4EhEmAZ1xQQFIJpDWTBx0nQ==}
     peerDependencies:
       storybook: ^8.4.7
 
@@ -868,6 +896,10 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
+
+  axe-core@4.10.2:
+    resolution: {integrity: sha512-RE3mdQ7P3FRSe7eqCWoeQ/Z9QXrtniSjp1wUjt5nRC3WIpz5rSCve6o3fsZ2aCpJtrZjSZgjwXAoTO5k4tEI0w==}
+    engines: {node: '>=4'}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -2128,6 +2160,12 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.28.1':
     optional: true
 
+  '@storybook/addon-a11y@8.4.7(storybook@8.4.7)':
+    dependencies:
+      '@storybook/addon-highlight': 8.4.7(storybook@8.4.7)
+      axe-core: 4.10.2
+      storybook: 8.4.7
+
   '@storybook/addon-actions@8.4.7(storybook@8.4.7)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -2194,6 +2232,15 @@ snapshots:
       storybook: 8.4.7
       ts-dedent: 2.2.0
 
+  '@storybook/addon-links@8.4.7(react@18.3.1)(storybook@8.4.7)':
+    dependencies:
+      '@storybook/csf': 0.1.12
+      '@storybook/global': 5.0.0
+      storybook: 8.4.7
+      ts-dedent: 2.2.0
+    optionalDependencies:
+      react: 18.3.1
+
   '@storybook/addon-measure@8.4.7(storybook@8.4.7)':
     dependencies:
       '@storybook/global': 5.0.0
@@ -2210,6 +2257,11 @@ snapshots:
   '@storybook/addon-outline@8.4.7(storybook@8.4.7)':
     dependencies:
       '@storybook/global': 5.0.0
+      storybook: 8.4.7
+      ts-dedent: 2.2.0
+
+  '@storybook/addon-themes@8.4.7(storybook@8.4.7)':
+    dependencies:
       storybook: 8.4.7
       ts-dedent: 2.2.0
 
@@ -2581,6 +2633,8 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.0.0
+
+  axe-core@4.10.2: {}
 
   balanced-match@1.0.2: {}
 
