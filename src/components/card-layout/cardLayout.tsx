@@ -1,3 +1,5 @@
+import { Card } from "../card/card";
+import "./cardLayout.styles.css";
 export const CardLayout = (...props: any) => {
   return (
     <div className="cards">
@@ -18,9 +20,7 @@ export const CardLayout = (...props: any) => {
         "youtube",
         "tiktok",
       ].map((brand) => (
-        <div className="card" key={brand}>
-          <i className={`fa-brands fa-${brand}`}></i>
-        </div>
+        <Card brand={brand} key={brand} />
       ))}
     </div>
   );

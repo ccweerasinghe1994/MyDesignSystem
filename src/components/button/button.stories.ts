@@ -15,12 +15,19 @@ type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    style: { backgroundColor: "blue", color: "white" },
+    variant: "primary",
   },
 };
 
 export const Secondary: Story = {
   args: {
-    children: "Secondary",
+    variant: "secondary",
   },
+};
+
+export const Destructive: Story = {
+  args: {
+    children: "this is sample text",
+    variant: "destructive"
+  }
 };
